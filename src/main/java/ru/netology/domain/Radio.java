@@ -6,14 +6,12 @@ public class Radio {
 
     public int setCurrentRadioStation(int currentRadioStation) {
 
-        if (currentRadioStation > 9) {
-            currentRadioStation = 0;
-        }
         if (currentRadioStation > 0) {
             this.currentRadioStation = currentRadioStation;
         }
-
-
+        if (currentRadioStation > 9) {
+            currentRadioStation = 0;
+        }
 
         this.currentRadioStation = currentRadioStation;
 
