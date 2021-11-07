@@ -1,30 +1,18 @@
 package ru.netology.domain;
 
 public class Radio {
-    private int id;
-    private int numberOfRadioStations = 10;
-    private int currentRadioStation = 5;
-    private int maxVolume = 100;
-    private int minVolume = 0;
-    private int currentVolume = 20;
-    private boolean on;
-
-    public Radio(int numberOfRadioStations) {
-        this.numberOfRadioStations = numberOfRadioStations;
-    }
-
-    public Radio() {
-
-    }
+    public int currentRadioStation;
+    public int currentVolume;
 
     public int setCurrentRadioStation(int currentRadioStation) {
 
-        if (currentRadioStation > (numberOfRadioStations - 1)) {
+        if (currentRadioStation > 9) {
             currentRadioStation = 0;
         }
         if (currentRadioStation > 0) {
             this.currentRadioStation = currentRadioStation;
         }
+
 
 
         this.currentRadioStation = currentRadioStation;
@@ -38,9 +26,10 @@ public class Radio {
     }
 
 
+
     public void setCurrentVolume(int currentVolume) {
 
-        if (currentVolume > 100) {
+        if (currentVolume > 10) {
             return;
         }
         this.currentVolume = currentVolume;
@@ -51,11 +40,12 @@ public class Radio {
     }
 
 
+
     public void increaseVolume() {
-        if (currentVolume < 100) {
+        if (currentVolume < 10) {
             currentVolume = currentVolume + 1;
         }
-        if (currentVolume == 100) {
+        if (currentVolume == 10) {
             currentVolume = currentVolume;
         }
 
@@ -72,12 +62,12 @@ public class Radio {
 
     public void increaseRadioStation() {
 
-        if (currentRadioStation < (numberOfRadioStations - 1)) {
+        if (currentRadioStation < 9) {
             currentRadioStation = currentRadioStation + 1;
-        } else if (currentRadioStation == (numberOfRadioStations - 1)) {
+        }
+        if (currentRadioStation >= 9) {
             currentRadioStation = 0;
         }
-
     }
 
     public void reducerRadioStation() {
@@ -85,9 +75,21 @@ public class Radio {
             currentRadioStation = currentRadioStation - 1;
         }
         if (currentRadioStation == 0) {
-            currentRadioStation = numberOfRadioStations - 1;
+            currentRadioStation = 9;
         }
     }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 }
