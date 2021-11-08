@@ -7,7 +7,6 @@ import org.junit.jupiter.api.Test;
 public class RadioTest {
 
 
-
     @Test
     public void shouldTheRadioStationTurnOn99() {
         Radio radio = new Radio(100);
@@ -139,6 +138,90 @@ public class RadioTest {
     }
 
     @Test
+    public void shouldTheRadioStationSwitchFrom49To50() {
+        Radio radio = new Radio(50);
+        radio.setCurrentRadioStation(49);
+
+        radio.increaseRadioStation();
+
+        int expected = 0;
+        int actual = radio.getCurrentRadioStation();
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void shouldTheRadioStationSwitchFrom48To49() {
+        Radio radio = new Radio(50);
+        radio.setCurrentRadioStation(48);
+
+        radio.increaseRadioStation();
+
+        int expected = 49;
+        int actual = radio.getCurrentRadioStation();
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void shouldTheRadioStationSwitchFrom14To15() {
+        Radio radio = new Radio(15);
+        radio.setCurrentRadioStation(14);
+
+        radio.increaseRadioStation();
+
+        int expected = 0;
+        int actual = radio.getCurrentRadioStation();
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void shouldTheRadioStationSwitchFrom13To14() {
+        Radio radio = new Radio(15);
+        radio.setCurrentRadioStation(13);
+
+        radio.increaseRadioStation();
+
+        int expected = 14;
+        int actual = radio.getCurrentRadioStation();
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void shouldTheRadioStationSwitchFrom24To25() {
+        Radio radio = new Radio(25);
+        radio.setCurrentRadioStation(24);
+
+        radio.increaseRadioStation();
+
+        int expected = 0;
+        int actual = radio.getCurrentRadioStation();
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void shouldTheRadioStationSwitchFrom23To24() {
+        Radio radio = new Radio(25);
+        radio.setCurrentRadioStation(23);
+
+        radio.increaseRadioStation();
+
+        int expected = 24;
+        int actual = radio.getCurrentRadioStation();
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void shouldTheRadioStationSwitchFrom25To26() {
+        Radio radio = new Radio(50);
+        radio.setCurrentRadioStation(25);
+
+        radio.increaseRadioStation();
+
+        int expected = 49;
+        int actual = radio.getCurrentRadioStation();
+        assertEquals(expected, actual);
+    }
+
+    @Test
     public void shouldTheRadioStationTurnOn156() {
         Radio radio = new Radio(100);
 
@@ -148,8 +231,6 @@ public class RadioTest {
         int actual = radio.getCurrentRadioStation();
         assertEquals(expected, actual);
     }
-
-
 
 
     @Test
@@ -290,7 +371,6 @@ public class RadioTest {
     }
 
 
-
     @Test
     public void shouldTheVolumeTurnOnTo100() {
         Radio radio = new Radio();
@@ -348,16 +428,16 @@ public class RadioTest {
     }
 
     @Test
-        public void shouldTheVolumeIncreaseFrom99To100() {
-            Radio radio = new Radio();
-            radio.setCurrentVolume(99);
+    public void shouldTheVolumeIncreaseFrom99To100() {
+        Radio radio = new Radio();
+        radio.setCurrentVolume(99);
 
-            radio.increaseVolume();
+        radio.increaseVolume();
 
-            int expected = 100;
-            int actual = radio.getCurrentVolume();
-            assertEquals(expected, actual);
-        }
+        int expected = 100;
+        int actual = radio.getCurrentVolume();
+        assertEquals(expected, actual);
+    }
 
     @Test
     public void shouldTheVolumeIncreaseFrom100To101() {
