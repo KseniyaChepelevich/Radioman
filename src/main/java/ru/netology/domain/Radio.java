@@ -72,16 +72,14 @@ public class Radio {
 
     public void increaseRadioStation() {
 
-        if (currentRadioStation == (numberOfRadioStations - 1)) {
-            currentRadioStation = 0;
-            return;
-        }
 
         if (currentRadioStation < (numberOfRadioStations - 1)) {
             currentRadioStation = currentRadioStation + 1;
 
+        } else if (currentRadioStation == (numberOfRadioStations - 1)) {
+            currentRadioStation = 0;
+            return;
         }
-
 
 
         this.currentRadioStation = currentRadioStation;
