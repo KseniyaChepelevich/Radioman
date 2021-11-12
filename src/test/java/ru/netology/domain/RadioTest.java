@@ -1,11 +1,9 @@
 package ru.netology.domain;
 
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 
 public class RadioTest {
-
 
 
     @Test
@@ -18,7 +16,6 @@ public class RadioTest {
         int expected = 9;
         int actual = radio.getCurrentRadioStation();
         assertEquals(expected, actual);
-
 
 
     }
@@ -35,7 +32,6 @@ public class RadioTest {
         assertEquals(expected, actual);
 
 
-
     }
 
     @Test
@@ -48,7 +44,6 @@ public class RadioTest {
         int expected = 5;
         int actual = radio.getCurrentRadioStation();
         assertEquals(expected, actual);
-
 
 
     }
@@ -65,7 +60,6 @@ public class RadioTest {
         assertEquals(expected, actual);
 
 
-
     }
 
     @Test
@@ -78,7 +72,6 @@ public class RadioTest {
         int expected = 1;
         int actual = radio.getCurrentRadioStation();
         assertEquals(expected, actual);
-
 
 
     }
@@ -95,7 +88,6 @@ public class RadioTest {
         assertEquals(expected, actual);
 
 
-
     }
 
     @Test
@@ -107,11 +99,9 @@ public class RadioTest {
         radio.increaseRadioStation();
 
 
-
         int expected = 0;
         int actual = radio.getCurrentRadioStation();
         assertEquals(expected, actual);
-
 
 
     }
@@ -125,11 +115,9 @@ public class RadioTest {
         radio.reducerRadioStation();
 
 
-
         int expected = 8;
         int actual = radio.getCurrentRadioStation();
         assertEquals(expected, actual);
-
 
 
     }
@@ -141,7 +129,6 @@ public class RadioTest {
         radio.setCurrentRadioStation(0);
 
         radio.increaseRadioStation();
-
 
 
         int expected = 1;
@@ -159,11 +146,9 @@ public class RadioTest {
         radio.reducerRadioStation();
 
 
-
         int expected = 9;
         int actual = radio.getCurrentRadioStation();
         assertEquals(expected, actual);
-
 
 
     }
@@ -177,20 +162,18 @@ public class RadioTest {
         radio.increaseRadioStation();
 
 
-
         int expected = 9;
         int actual = radio.getCurrentRadioStation();
         assertEquals(expected, actual);
 
 
-
     }
 
     @Test
-    public void shouldTheRadioStationTurnOn100() {
+    public void shouldTheRadioStationTurnOnMinus100() {
         Radio radio = new Radio();
 
-        radio.setCurrentRadioStation(100);
+        radio.setCurrentRadioStation(-100);
 
 
         int expected = 0;
@@ -198,9 +181,7 @@ public class RadioTest {
         assertEquals(expected, actual);
 
 
-
     }
-
 
 
     @Test
@@ -213,7 +194,6 @@ public class RadioTest {
         int expected = 10;
         int actual = radio.getCurrentVolume();
         assertEquals(expected, actual);
-
 
 
     }
@@ -230,7 +210,6 @@ public class RadioTest {
         assertEquals(expected, actual);
 
 
-
     }
 
     @Test
@@ -245,7 +224,6 @@ public class RadioTest {
         assertEquals(expected, actual);
 
 
-
     }
 
     @Test
@@ -258,7 +236,6 @@ public class RadioTest {
         int expected = 1;
         int actual = radio.getCurrentVolume();
         assertEquals(expected, actual);
-
 
 
     }
@@ -276,28 +253,25 @@ public class RadioTest {
         assertEquals(expected, actual);
 
 
-
     }
-
 
 
     @Test
 
 
-        public void shouldTheVolumeIncreaseFrom9To10() {
-            Radio radio = new Radio();
-            radio.setCurrentVolume(9);
+    public void shouldTheVolumeIncreaseFrom9To10() {
+        Radio radio = new Radio();
+        radio.setCurrentVolume(9);
 
 
-            radio.increaseVolume();
+        radio.increaseVolume();
 
-            int expected = 10;
-            int actual = radio.getCurrentVolume();
-            assertEquals(expected, actual);
+        int expected = 10;
+        int actual = radio.getCurrentVolume();
+        assertEquals(expected, actual);
 
 
-
-        }
+    }
 
     @Test
 
@@ -312,7 +286,6 @@ public class RadioTest {
         int expected = 10;
         int actual = radio.getCurrentVolume();
         assertEquals(expected, actual);
-
 
 
     }
@@ -332,7 +305,6 @@ public class RadioTest {
         assertEquals(expected, actual);
 
 
-
     }
 
     @Test
@@ -348,7 +320,6 @@ public class RadioTest {
         int expected = 9;
         int actual = radio.getCurrentVolume();
         assertEquals(expected, actual);
-
 
 
     }
@@ -368,7 +339,6 @@ public class RadioTest {
         assertEquals(expected, actual);
 
 
-
     }
 
     @Test
@@ -386,11 +356,7 @@ public class RadioTest {
         assertEquals(expected, actual);
 
 
-
     }
-
-
-
 
 
     private void assertEquals(int expected, int actual) {
