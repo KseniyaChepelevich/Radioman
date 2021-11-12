@@ -91,4 +91,6 @@ public class Radio {
         }
     }
 
+    public void setCurrentMaxVolume(int i) {
+    }
 }
