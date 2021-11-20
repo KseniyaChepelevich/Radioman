@@ -358,6 +358,38 @@ public class RadioTest {
 
     }
 
+    @Test
+
+
+    public void shouldTheVolumeLow0() {
+        Radio radio = new Radio();
+
+        radio.setCurrentVolume(-1);
+
+        int expected = 0;
+        int actual = radio.getCurrentVolume();
+        assertEquals(expected, actual);
+
+
+    }
+
+    @Test
+
+
+    public void shouldTheVolumeIncreaseFrom1To2() {
+        Radio radio = new Radio();
+        radio.setCurrentVolume(1);
+
+
+        radio.increaseVolume();
+
+        int expected = 2;
+        int actual = radio.getCurrentVolume();
+        assertEquals(expected, actual);
+
+
+    }
+
 
     private void assertEquals(int expected, int actual) {
     }
