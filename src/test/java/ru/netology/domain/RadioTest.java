@@ -170,6 +170,22 @@ public class RadioTest {
     }
 
     @Test
+
+    public void shouldTheRadioStationSwitchFrom7To8() {
+        Radio radio = new Radio();
+        radio.setCurrentRadioStation(7);
+
+        radio.increaseRadioStation();
+
+
+        int expected = 8;
+        int actual = radio.getCurrentRadioStation();
+        assertEquals(expected, actual);
+
+
+    }
+
+    @Test
     public void shouldTheRadioStationTurnOnMinus100() {
         Radio radio = new Radio();
 
