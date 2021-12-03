@@ -49,9 +49,6 @@ public class Radio {
         if (currentVolume < 10) {
             currentVolume = currentVolume + 1;
         }
-        if (currentVolume == 10) {
-            currentVolume = currentVolume;
-        }
 
     }
 
@@ -69,8 +66,9 @@ public class Radio {
         if (currentRadioStation < 9) {
             currentRadioStation = currentRadioStation + 1;
         }
-        if (currentRadioStation >= 9) {
+        else if (currentRadioStation == 9) {
             currentRadioStation = 0;
+            return;
         }
     }
 
