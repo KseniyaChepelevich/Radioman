@@ -110,6 +110,23 @@ public class RadioTest {
 
     @Test
 
+    public void shouldTheRadioStationWillBeBigger8AndThenBigger9() {
+        Radio radio = new Radio();
+        radio.setCurrentRadioStation(8);
+
+        radio.increaseRadioStation();
+        radio.increaseRadioStation();
+
+
+        int expected = 0;
+        int actual = radio.getCurrentRadioStation();
+        assertEquals(expected, actual);
+
+
+    }
+
+    @Test
+
     public void shouldTheRadioStationSwitchFrom9To8() {
         Radio radio = new Radio();
         radio.setCurrentRadioStation(9);
