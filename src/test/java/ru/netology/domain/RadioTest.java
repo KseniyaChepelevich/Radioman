@@ -205,6 +205,70 @@ public class RadioTest {
     }
 
     @Test
+
+    public void shouldTheRadioStationSwitchFrom6To7() {
+        Radio radio = new Radio();
+        radio.setCurrentRadioStation(6);
+
+        radio.increaseRadioStation();
+
+
+        int expected = 7;
+        int actual = radio.getCurrentRadioStation();
+        assertEquals(expected, actual);
+
+
+    }
+
+    @Test
+
+    public void shouldTheRadioStationSwitchFrom5To6() {
+        Radio radio = new Radio();
+        radio.setCurrentRadioStation(5);
+
+        radio.increaseRadioStation();
+
+
+        int expected = 6;
+        int actual = radio.getCurrentRadioStation();
+        assertEquals(expected, actual);
+
+
+    }
+
+    @Test
+
+    public void shouldTheRadioStationSwitchFrom1To2() {
+        Radio radio = new Radio();
+        radio.setCurrentRadioStation(1);
+
+        radio.increaseRadioStation();
+
+
+        int expected = 2;
+        int actual = radio.getCurrentRadioStation();
+        assertEquals(expected, actual);
+
+
+    }
+
+    @Test
+
+    public void shouldTheRadioStationSwitchFrom2To3() {
+        Radio radio = new Radio();
+        radio.setCurrentRadioStation(2);
+
+        radio.increaseRadioStation();
+
+
+        int expected = 3;
+        int actual = radio.getCurrentRadioStation();
+        assertEquals(expected, actual);
+
+
+    }
+
+    @Test
     public void shouldTheRadioStationTurnOnMinus100() {
         Radio radio = new Radio();
 
